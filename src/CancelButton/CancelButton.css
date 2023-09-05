@@ -1,0 +1,9 @@
+.CancelButton{
+    margin-right: 20px;
+}
+.CancelButton svg{
+    fill: #494C6B;
+}
+.CancelButton svg:hover{
+    fill: #C058F3;
+}

@@ -1,0 +1,26 @@
+.TodoFooter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.TodoFooter__Counter{
+    margin-left: 20px;
+    color: #9495A5;
+}
+
+.TodoFooter--completed{
+    margin-right: 20px;
+    height: 100%;
+    background-color: #ffff;
+    border: none;
+    color: #9495A5;
+}
+
+.TodoFooter--completed:hover{
+    color: black;
+}

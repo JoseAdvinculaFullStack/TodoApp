@@ -1,0 +1,28 @@
+.TodoItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #FFFF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #E3E4F1;
+}
+
+.TodoItem button {
+    padding: 0;
+    height: 24px;
+    background: none;
+    border: none;
+}
+
+.TodoItem p{
+    width: 63%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.TodoItem .TodoItem__text--underline{
+    text-decoration: line-through;
+    color: #D1D2DA;
+}
