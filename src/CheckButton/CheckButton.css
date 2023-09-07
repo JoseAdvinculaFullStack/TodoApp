@@ -6,10 +6,6 @@
    visibility: hidden;
 }
 
-.CheckButton:hover svg #check{
-    visibility: visible;
-}
-
 .CheckButton--active svg #check{
     visibility: visible;
 }
