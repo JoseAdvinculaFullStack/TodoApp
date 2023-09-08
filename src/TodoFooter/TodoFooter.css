@@ -6,6 +6,9 @@
     background-color: #ffff;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    font-family: Josefin Sans;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .TodoFooter__Counter{
@@ -19,6 +22,9 @@
     background-color: #ffff;
     border: none;
     color: #9495A5;
+    font-family: Josefin Sans;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .TodoFooter--completed:hover{

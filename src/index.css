@@ -1,6 +1,7 @@
 #root{
     height: 100vh;
-    background-color: #FAFAFA;;
+    background-color: #FAFAFA;
+    font-family: Josefin Sans;
 }
 body{
     margin: 0;

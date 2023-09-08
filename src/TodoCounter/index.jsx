@@ -1,8 +1,11 @@
+import { useContext } from "react";
+import { TodoContext } from "../TodoContext";
 
 const TodoCounter = () =>{
+    const {completedTodos} = useContext(TodoContext)
     return (
         <div className="TodoCounter">
-            <p>5 items left</p>
+            <p>{completedTodos} items left</p>
         </div>
     )
 }

@@ -7,6 +7,9 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom: 1px solid #E3E4F1;
+    font-family: Josefin Sans;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .TodoItem button {
@@ -17,8 +20,7 @@
 }
 
 .TodoItem p{
-    width: 63%;
-    text-align: center;
+    width: 68%;
     word-wrap: break-word;
 }
 

@@ -20,6 +20,9 @@
 }
 
 .TodoContainer button{
+    font-family: Josefin Sans;
+    font-size: 12px;
+    font-weight: 700;
     box-sizing: border-box;
     border: none;
     background: none;

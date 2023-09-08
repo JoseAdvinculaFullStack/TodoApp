@@ -1,8 +1,11 @@
+import { useContext } from 'react'
 import CheckSvg from '../CheckSvg'
 import './CheckButton.css'
-const CheckButton = ({active}) => {
+import { TodoContext } from '../TodoContext'
+const CheckButton = ({active,id}) => {
+    const {completeTodos} = useContext(TodoContext)
     return(
-        <button type="button" className={`CheckButton ${ active ? "CheckButton--active": ""}`}>
+        <button type="button" className={`CheckButton ${ active ? "CheckButton--active": ""}`} onClick={()=>completeTodos(id)}>
             <CheckSvg active="true"/>
         </button>
     )

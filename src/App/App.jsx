@@ -4,13 +4,17 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import TodoHeader from '../TodoHeader'
 import TodoBody from '../TodoBody'
+import { TodoProvider } from '../TodoContext'
+
 
 function App() {
   
   return (
     <>
-      <TodoHeader/>
-      <TodoBody/>
+      <TodoProvider>
+        <TodoHeader/>
+        <TodoBody/>
+      </TodoProvider>
       
     </>
   )
