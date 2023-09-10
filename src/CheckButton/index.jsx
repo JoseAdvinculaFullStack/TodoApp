@@ -3,10 +3,11 @@ import CheckSvg from '../CheckSvg'
 import './CheckButton.css'
 import { TodoContext } from '../TodoContext'
 const CheckButton = ({active,id}) => {
-    const {completeTodos} = useContext(TodoContext)
+    const {completeTodos,darkState} = useContext(TodoContext)
+    console.log(darkState)
     return(
-        <button type="button" className={`CheckButton ${ active ? "CheckButton--active": ""}`} onClick={()=>completeTodos(id)}>
-            <CheckSvg active="true"/>
+        <button type="button" className={`CheckButton ${ active ? "CheckButton--active": ""} ${darkState ? 'CheckButton-dark' : ''}`} onClick={()=>completeTodos(id)}>
+            <CheckSvg dark_value={darkState ? "true": "false"}/>
         </button>
     )
 }

@@ -10,7 +10,7 @@ import { DndContext, closestCenter,PointerSensor,useSensor,useSensors } from "@d
 import { SortableContext,verticalListSortingStrategy,arrayMove } from "@dnd-kit/sortable"
 
 const TodoBody = () =>{
-    const {filterTodos,updateTodos} = useContext(TodoContext);
+    const {filterTodos,updateTodos,darkState} = useContext(TodoContext);
 
     const sensors = useSensors(
         useSensor(PointerSensor,{
@@ -27,7 +27,7 @@ const TodoBody = () =>{
     }
     
     return(
-        <main className="TodoBody">
+        <main className={`TodoBody ${darkState ? 'TodoBody--dark' : '' }`}>
             <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd} sensors={sensors}>
                 <TodoList>
                     <SortableContext items={filterTodos} strategy={verticalListSortingStrategy}>

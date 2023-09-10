@@ -9,3 +9,40 @@
 .CheckButton--active svg #check{
     visibility: visible;
 }
+
+.CheckButton svg #draw{ 
+    visibility: hidden;
+ }
+
+ .CheckButton--active svg #draw{
+    visibility: visible;
+}
+
+
+.CheckButton-dark svg #circle{
+    fill:#25273D;
+}
+
+@media (min-width: 992px) {
+    .CheckButton svg{
+        width: 24px;
+        height: 24px;
+    }
+    .CheckButton svg #circle{
+        r:11.5;
+        cx: 12;
+        cy:12;
+    }
+
+    .CheckButton svg #check{
+        r:12;
+        cx: 12;
+        cy:12;
+        /* transform: translate(2px,2px); */
+    }
+
+    .CheckButton svg path{
+        transform: translate(2px,2px);
+    }
+    
+  }

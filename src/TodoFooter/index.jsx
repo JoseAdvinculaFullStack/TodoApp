@@ -4,13 +4,13 @@ import "./TodoFooter.css"
 import { TodoContext } from "../TodoContext"
 
 const TodoFooter = () => {
-    const {deleteTodosCompleted} = useContext(TodoContext);
+    const {deleteTodosCompleted,darkState} = useContext(TodoContext);
     return(
-        <div className="TodoFooter">
-            <div className="TodoFooter__Counter">
+        <div className={`TodoFooter ${darkState ? 'TodoFooter--dark' : ""}`}>
+            <div className={`TodoFooter__Counter ${darkState ? 'TodoFooter__Counter--dark' : ""}`}>
                 <TodoCounter/>
             </div>
-            <button type="button" className="TodoFooter--completed" onClick={()=> deleteTodosCompleted()}>
+            <button type="button" className={`TodoFooter--completed ${darkState ? 'TodoFooter__button--dark' :""}`} onClick={()=> deleteTodosCompleted()}>
                 Clear Completed
             </button>
         </div>

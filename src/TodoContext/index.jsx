@@ -12,6 +12,14 @@ const TodoProvider = ({children}) => {
         error
     } = useLocalStorage("TODOS_V1",[]);
 
+    const{
+        item:darkState,
+        saveItem:saveDarkState,
+        loadingDark,
+        errorDark
+    } = useLocalStorage("Dark",true);
+
+
     
     const filterTodosActive = (todo) => !todo.completed;
     const filterTodosCompleted= (todo)=> !!todo.completed;
@@ -57,6 +65,10 @@ const TodoProvider = ({children}) => {
         saveTodos(newTodos)
     }
 
+    const updateStateDark = (newState) => {
+        saveDarkState(newState);
+    }
+
     const filterTodos = todos.filter(categorias[categoriaSeleccionada]);
     return(
         <TodoContext.Provider value={{
@@ -74,7 +86,9 @@ const TodoProvider = ({children}) => {
             filterTodos,
             deleteTodosCompleted,
             addTodos,
-            updateTodos
+            updateTodos,
+            darkState,
+            updateStateDark
         }}>
             {children}
         </TodoContext.Provider>
